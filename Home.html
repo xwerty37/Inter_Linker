@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style media="screen">
+    .home {
+      width: 100%;
+      height: 800px;
+      margin: 0;
+      padding-top: 100px;
+    }
+    .slideshow {
+    	position: absolute;
+    	width: 100vw;
+    	height: 100vh;
+    	overflow: hidden;
+    }
+    .slideshow-image {
+    	position: absolute;
+    	width: 100%;
+    	height: 100%;
+    	background: no-repeat 50% 50%;
+    	background-size: cover;
+    	animation-name: kenburns;
+    	animation-timing-function: linear;
+    	animation-iteration-count: infinite;
+    	animation-duration: 16s;
+    	opacity: 1;
+    	transform: scale(1.2);
+    }
+
+    .slideshow-image:nth-child(1) {
+    	animation-name: kenburns-1;
+    	z-index: 4;
+    }
+
+    .slideshow-image:nth-child(2) {
+    	animation-name: kenburns-2;
+    	z-index: 3;
+    }
+
+    .slideshow-image:nth-child(3) {
+    	animation-name: kenburns-3;
+    	z-index: 2;
+    }
+
+    .slideshow-image:nth-child(4) {
+    	animation-name: kenburns-4;
+    	z-index: 1;
+    }
+
+    @keyframes kenburns-1 {
+    	0% {
+    		opacity: 1;
+    		transform: scale(1.2);
+    	}
+
+    	1.5625% {
+    		opacity: 1;
+    	}
+
+    	23.4375% {
+    		opacity: 1;
+    	}
+
+    	26.5625% {
+    		opacity: 0;
+    		transform: scale(1);
+    	}
+
+    	100% {
+    		opacity: 0;
+    		transform: scale(1.2);
+    	}
+
+    	98.4375% {
+    		opacity: 0;
+    		transform: scale(1.21176);
+    	}
+
+    	100% {
+    		opacity: 1;
+    	}
+    }
+
+    @keyframes kenburns-2 {
+    	23.4375% {
+    		opacity: 1;
+    		transform: scale(1.2);
+    	}
+
+    	26.5625% {
+    		opacity: 1;
+    	}
+
+    	48.4375% {
+    		opacity: 1;
+    	}
+
+    	51.5625% {
+    		opacity: 0;
+    		transform: scale(1);
+    	}
+
+    	100% {
+    		opacity: 0;
+    		transform: scale(1.2);
+    	}
+    }
+
+    @keyframes kenburns-3 {
+    	48.4375% {
+    		opacity: 1;
+    		transform: scale(1.2);
+    	}
+
+    	51.5625% {
+    		opacity: 1;
+    	}
+
+    	73.4375% {
+    		opacity: 1;
+    	}
+
+    	76.5625% {
+    		opacity: 0;
+    		transform: scale(1);
+    	}
+
+    	100% {
+    		opacity: 0;
+    		transform: scale(1.2);
+    	}
+    }
+
+    @keyframes kenburns-4 {
+    	73.4375% {
+    		opacity: 1;
+    		transform: scale(1.2);
+    	}
+
+    	76.5625% {
+    		opacity: 1;
+    	}
+
+    	98.4375% {
+    		opacity: 1;
+    	}
+
+    	100% {
+    		opacity: 0;
+    		transform: scale(1);
+    	}
+    }
+    header {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    h1 {
+      width: 50%;
+      font-style: oblique;
+      text-shadow:-2px 0 white,0 2px white,2px 0 white,0 -2px white;
+      font-size: 8rem;
+      margin: 0;
+      text-align: center;
+    }
+    main {
+      height: 200px;
+      padding: 150px 0 0 0;
+    }
+    footer {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+    #menu {
+      width: 120px;
+      height: 120px;
+      border: 2px solid black;
+      padding: 0px;
+      font-size: 2rem;
+      display: flex;
+      justify-content: center;
+      border-radius: 20px;
+      background-color: rgba(255,255,255,0.8);
+      transition: all 0.7s;
+    }
+    img {
+      width: 10%;
+      display: none;
+    }
+    #site {
+      width: 85%;
+      border: 3px solid white;
+      margin-left: 7.5%;
+      padding: 0;
+      transition: all 0.7s;
+    }
+    #link {
+      color: skyblue;
+      display: none;
+      text-decoration: none;
+      margin: 0 0 0 12.5%;
+    }
+    #icon {
+      display: flex;
+      width: 90px;
+      height: 90px;
+      margin: 15px;
+    }
+    #travel2 {
+      display: none;
+    }
+    #menu:hover img {
+      width: 30%;
+      margin: 0 30% 0 30%;
+      display: inline-block;
+    }
+    #menu:hover {
+      width: 1200px;
+      display: flex;
+      align-items: center;
+    }
+    #menu:hover #icon {
+      display: none;
+    }
+    #site:hover {
+      display: inline-block;
+      border: 3px solid black;
+      background: rgba(128,128,128,0.5);
+    }
+    #site:hover #link{
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+    <div class="slideshow">
+      <div class="slideshow-image" style="background-image: url('images/office.jpg')"></div>
+      <div class="slideshow-image" style="background-image: url('images/office1.jpg')"></div>
+      <div class="slideshow-image" style="background-image: url('images/office2.jpg')"></div>
+      <div class="slideshow-image" style="background-image: url('images/office3.jpg')"></div>
+    </div>
+    <div class="home" style="position: absolute; z-index: 4;">
+      <header><h1>Inter Linker</h1></header>
+      <section>
+        <main>
+          <div id="site">
+            <a href="https://www.naver.com/" id="link"><h2>네이버</h2></a>
+            <a href="https://www.daum.net/" id="link"><h2>다음</h2></a>
+            <a href="https://www.google.co.kr/" id="link"><h2>구글</h2></a>
+            <a href="https://www.nate.com/" id="link"><h2>네이트</h2></a>
+            <a href="http://zum.com/" id="link"><h2>점</h2></a>
+          </div>
+        </main>
+      </section>
+      <footer>
+        <div id="menu">
+          <img id="icon" src="images/icon.png" alt="">
+          <a href="travel.html"><img id="travel1" src="images/airplain1.png" onmouseover="this.src='images/airplain2.png'" onmouseout="this.src='images/airplain1.png'" alt="여행" title="여행 관련 페이지 바로가기"></a>
+          <a href="read.html"><img id="read1" src="images/book1.png" onmouseover="this.src='images/book2.png'" onmouseout="this.src='images/book1.png'" alt="독서" title="독서 관련 페이지 바로가기"></a>
+          <a href="shopping.html"><img id="shopping1" src="images/cart1.png" onmouseover="this.src='images/cart2.png'" onmouseout="this.src='images/cart1.png'" alt="쇼핑" title="쇼핑 관련 페이지 바로가기"></a>
+          <a href="game.html"><img id="game1" src="images/console1.png" onmouseover="this.src='images/console2.png'" onmouseout="this.src='images/console1.png'" alt="게임" title="게임 관련 페이지 바로가기"></a>
+        </div>
+      </footer>
+    </div>
+</body>
+</html>

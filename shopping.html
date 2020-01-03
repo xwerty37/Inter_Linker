@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<style>
+  body {
+    background-image: url("images/shopping_back.png");
+    background-size: 100%;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+  h1 {
+    font-size: 4rem;
+    color: white;
+  }
+  main {
+    display: inline-flex;
+  }
+  a {
+    text-decoration: none;
+  }
+  #menu {
+    width: 300px;
+    height: 300px;
+    border: 1px solid #bbb;
+    margin: 100px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    background: rgba(200, 200, 200, 0.3);
+    transition: all 1s;
+  }
+  #option {
+    display: none;
+    margin: 0;
+  }
+  #logo {
+    display: none;
+    margin: 0;
+  }
+  #bag {
+    display: flex;
+    width:100%;
+  }
+  #menu:hover {
+    width: 450px;
+    height: 450px;
+    margin: 150px;
+    transform: rotateY(360deg);
+    background: rgba(200, 200, 200, 0.8);
+  }
+  #menu:hover #bag {
+    display: none;
+  }
+  #menu:hover #logo {
+    width: 150px;
+    display: flex;
+  }
+  #menu:hover #option {
+    font-size: 2rem;
+  }
+  #option {
+    font-size: 0;
+    line-height: 150px;
+    width: 450px;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+  }
+</style>
+</head>
+<body>
+  <header><h1 style="background:#883344">Inter Shopping</h1></header>
+  <section>
+    <main>
+      <div id="menu">
+        <img id="bag" src="images/bag.png" alt="쇼핑백">
+        <a href="http://www.auction.co.kr/" id="option"><img id="logo" src="images/logo1.png" alt="">옥션</a>
+        <a href="http://www.gmarket.co.kr/" id="option"><img id="logo" src="images/logo2.png" alt="">G마켓</a>
+        <a href="https://www.11st.co.kr/html/main.html" id="option"><img id="logo" src="images/logo3.png" alt="">11번가</a>
+      </div>
+      <div id="menu">
+        <img id="bag" src="images/bag.png" alt="쇼핑백">
+        <a href="https://www.tmon.co.kr/" id="option"><img id="logo" src="images/logo4.png" alt="">티몬</a>
+        <a href="https://front.wemakeprice.com/main" id="option"><img id="logo" src="images/logo5.png" alt="">위메프</a>
+        <a href="https://www.coupang.com/" id="option"><img id="logo" src="images/logo6.png" alt="">쿠팡</a>
+      </div>
+      <div id="menu">
+        <img id="bag" src="images/bag.png" alt="쇼핑백">
+        <a href="http://www.lotteimall.com/main/viewMain.lotte?dpml_no=1" id="option"><img id="logo" src="images/logo7.png" alt="">롯데홈쇼핑</a>
+        <a href="http://www.compuzone.co.kr/main/main.htm" id="option"><img id="logo" src="images/logo8.png" alt="">컴퓨존</a>
+        <a href="http://www.kyobobook.co.kr/index.laf?OV_REFFER=https://www.google.com/" id="option"><img id="logo" src="images/logo9.png" alt="">교보문고</a>
+      </div>
+    </main>
+  </section>
+  <footer></footer>
+</body>
+</html>
